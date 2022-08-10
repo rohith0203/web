@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <style>
+        /* body{
+            color:rgb(12, 12, 12);
+            text-align: center;
+            font-size: large;
+        } */
+        body{
+            background-color: white;
+            text-align: center;
+            font-size: large;
+        }
+        .darkmode{
+           background-color: black;
+           text-align: center;
+            font-size: large;
+            color: white;
+        }
+    </style>
+</head>
+<script>
+ function fun()
+{
+    let a=document.body;
+    a.classList.toggle("darkmode");
+}
+</script>
+<body>
+       <button onclick="fun()">darkmode</button> 
+         <div id="div1">
+       <p id="lightmode">if you click the button then. you can see the content mode will be changed</p>
+
+
+    </div>
+
+
+</body>
+</html>

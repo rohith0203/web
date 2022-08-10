@@ -1,0 +1,83 @@
+.container {
+    box-sizing: border-box;
+    margin: 40px;
+    text-align: center;
+    font-family: sans-serif;
+    max-width: 1200px;
+    border: 1px solid #eee;
+    display: flex;
+  }
+  
+  .left {
+    border-right: 1px solid #eee;
+  }
+  
+  .right {
+    padding: 20px;
+    margin: 0 auto;
+  }
+  
+  hr {
+    width: 80%;
+    border: 0;
+    height: 1px;
+    background: #eee;
+  }
+  
+  #imagelinkform {
+    margin: 30px;
+  }
+  
+  #imagelinkform label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  #imagelinkform input {
+    width: 60%;
+  }
+  
+  #fileinput {
+    display: none;
+  }
+  
+  #dropzone {
+      width: 80%;
+      height: 200px;
+      border: 2px solid #333;
+      margin: 30px auto;
+      text-align: center;
+      vertical-align: middle;
+  }
+  
+  #dropzone:hover {
+    cursor: pointer;
+  }
+  
+  #dropzone p {
+    position: relative;
+    font-size: 1.5rem;
+    max-width: 70%;
+    margin: 0 auto;
+    top: 32%;
+  }
+  
+  #dropzone.dragging {
+    background: #444;
+  }
+  
+  #gallery {
+    margin: 0 auto;
+  }
+  
+  #cleargallery {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  #gallery img {
+      display: block;
+      margin: 20px auto;
+      max-width: 400px;
+      max-height: 400px;
+  }

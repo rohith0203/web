@@ -1,0 +1,77 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Reg Form</title>    
+    <style>    
+        #d{
+            border: 5px solid;
+            border-right-color: aqua;
+            border-left-color: rgb(43, 0, 255);
+            border-top-color: rgb(0, 255, 119);
+            border-bottom-color: rgb(148, 173, 173);
+           width:20%;
+           height:70%;
+           text-align: center;
+           margin-left: 30%;
+        }
+        #f label,input{
+            text-align-last:center;
+            padding:0.5%;
+            margin-left: 10%;
+            
+        }
+        #demo1,#demo2,#demo3{
+            color:red;
+        }
+    </style>       
+</head>    
+<body>    
+       <div id="d">
+    <form id="f" name="form" onsubmit="validate()">    
+        <center><h2>Registration Form</h2>    </center>
+        <label>First Name: </label><input type="text" name="fname" placeholder="First Name"><br><span id="demo1"></span><br>
+            
+                
+                
+                <label>Email Id: </label><input type="text" name="email" placeholder="example@gmail.com"><br><span id="demo2"></span>  <br>  
+                 
+                <label>Mobile: </label><input type="number" name="mobile"><span id="demo3"><br></span>    <br>
+        
+            
+                    <input type="button" name="submit" value="Submit" onclick="validate()">    
+                    <input type="reset" name="reset" value="Reset" onload="validate()">    
+                 
+    </form>   
+</div>
+    
+    <script>    
+        function validate() {    
+            var fname = document.form.fname;      
+            var email = document.form.email;    
+            var mobile = document.form.mobile;    
+                
+    
+            if (fname.value.length <= 0) {    
+                document.getElementById("demo1").innerHTML="Please enter the field";   
+                fname.focus();    
+                return false;  
+                  
+            }
+            
+            
+            if (email.value.length <= 0) {    
+                document.getElementById("demo2").innerHTML="Please enter the field";
+                email.focus();    
+                return false;    
+            } 
+            if (mobile.value.length <= 0) {    
+                document.getElementById("demo3").innerHTML="Please enter the field";
+                mobile.focus();    
+                return false;    
+            } 
+            
+        
+       }    
+    </script> 
+</body>    
+</html>     

@@ -1,0 +1,98 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Reg Form</title>    
+    <style>    
+        #d{
+            border: 5px solid;
+            border-right-color: aqua;
+            border-left-color: rgb(43, 0, 255);
+            border-top-color: rgb(0, 255, 119);
+            border-bottom-color: rgb(148, 173, 173);
+           width:50%;
+           
+           padding-bottom:10%;
+           text-align: center;
+           margin-left: 30%;
+        }
+        #f label,input{
+            text-align-last:center;
+            padding:0.5%;
+            margin-top: 10%;
+            margin-left: 10%;
+            
+        }
+        #demo11,#demo12,#demo13{
+            color: red;
+        }
+        #demo1,#demo2,#demo3{
+            color: rgb(31, 233, 149);
+        }
+    </style>       
+</head>    
+<body>    
+       <div id="d">
+    <form id="f" name="form" onsubmit="validate()">    
+        <center><h2>Registration Form</h2>    </center>
+        <label>First Name: </label><input type="text" pattern="[0-9]{5}" title="not numbers" name="fname" placeholder="First Name"><br><span id="demo1"></span><br><span id="demo11"></span><br>
+            
+                
+                
+                <label>Email Id: </label><input type="text" name="email" placeholder="example@gmail.com"><br><span id="demo2"></span>  <br><span id="demo12"></span>  <br>    
+                 
+                <label>Mobile: </label><input type="number" name="mobile"><br><span id="demo3"></span>    <br><span id="demo13"></span>    <br>
+        
+            
+                    <input type="button" name="submit" value="Submit" onclick="validate()">    
+                    <input type="button" name="reset" value="Reset" onclick="validate()">    
+                 
+    </form>   
+</div>
+    
+    <script>    
+        function validate() {  
+            
+            var fname = document.form.fname.value;      
+            var email = document.form.email.value;    
+            var mobile = document.form.mobile.value;    
+               var expname=/^[a-zA-Z ]{2,}$/; 
+            //var expname=/[A-Z]{0,}[a-z]{0,}/;
+               var expemail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+               var expmobile =/^\d{10}$/; 
+
+            if(fname.length <= 0) {    
+                document.getElementById("demo11").innerHTML="field is required";   
+            }
+            if(!fname.match(expname))
+            {
+                document.getElementById("demo1").innerHTML="Only alphabets are allowed not other charaters";      
+            }
+            
+            
+            
+            if(email.length <= 0) {    
+                document.getElementById("demo12").innerHTML="field is required";     
+            }
+            if(!email.match(expemail))
+            {
+                document.getElementById("demo2").innerHTML="give the charaters like mail";    
+            }
+            //console.log(patt.test(mobile );
+
+
+            if(mobile.length <= 0) {    
+                document.getElementById("demo13").innerHTML="field is required ";        
+            }
+            
+            if(!mobile.match(expmobile ))
+            {
+                document.getElementById("demo3").innerHTML="Only numbers are allowed not other charaters";        
+            }   
+                 
+           
+            
+        
+        }    
+    </script> 
+</body>    
+</html>    

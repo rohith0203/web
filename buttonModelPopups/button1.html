@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <style>
+     #fst{
+       position:fixed;
+        top:0%;
+        bottom:0%;
+        left:0%;
+        right:0%;
+        z-index: 1;
+        background-color: aquamarine;
+     }
+     #snd{
+        max-width: 600px;
+        height:300;
+        margin:auto;
+        background-color: aliceblue;
+        position: absolute;
+        top: 0%;
+        bottom:0%;
+        left:0%;
+        right:0%;
+     }
+     #web{
+        height:100px;
+     }
+
+    </style>
+    
+</head>
+
+<body>
+ 
+   
+  <button id="show-mdl-btn">show-model</button>
+    <div id="fst">
+        
+      <div id="snd">
+        <h1>please log in once again</h1>
+        
+        <button id="close-mdl-btn">close-model</button>
+      </div>
+
+    </div>
+    <div id="thrd"></div>
+
+    <script>
+      const fst=documnet.querySelector("#fst");
+      document.querySelector("#show-mdl-btn").addEventListener("click",()=>{
+        fst.style.display="block";
+      })
+      document.querySelector("#close-mdl-btn").addEventListener("click",()=>{
+        fst.style.display="none";
+      })
+      </script>
+</body>
+</html>

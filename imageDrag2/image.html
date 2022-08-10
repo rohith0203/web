@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+<script src="image.js"></script>
+</head>
+<body>
+    <div class="outer-body">
+    
+  <!--   Draggable h1 for test 🧐  -->
+  <h1 draggable="true">Simple Drag and Drop 📦 </h1>
+
+  <!--   Drop Area 📥 -->
+  <div class="the-box" 
+       id="magicBox" 
+       ondragover="dragging(event)" 
+       ondragleave="dragLeft()">
+
+  </div>
+</div>
+
+
+
+<!--   Drop Area 📥 -->
+<div class="the-box" 
+id="magicBox" 
+ondrop="onDrop(event)" 
+ondragover="dragging(event)" 
+ondragleave="dragLeft()">
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <style>
+        #data2{
+          display:none;
+        }
+    </style>
+</head>
+<body>
+    The only purpose of this blog is to share the tips and tricks which I have learned so far in my career and also some of which I'm still learning.
+<span id="data1">***</span>
+  
+    <br><br>
+  <span id="data2">
+  If you want to reach me for any service you need or to hire me or just for a small project, I am happy to help you out with anything, anytime. You can contact me through many social websites which are listed on Contacts page from the left sidebar. <br><br>
+  </span></p>
+  <button onclick="more()" id="readmore">Click to Read More About the Blog</button>
+  <script>
+  function more()
+  {
+    var star=document.getElementById("data1");
+    var para=document.getElementById("data2");
+    var btn=document.getElementById("readmore");
+    if(star.style.display=="none")
+    {
+        star.style.display="inline";
+        btn.innerHTML="click to read more";
+        para.style.display="none";
+    }else{
+        star.style.display = "none";
+    btn.innerHTML = "Read Less";
+      para.style.display = "inline";
+    }
+  }
+
+  </script>
+</body>
+</html>

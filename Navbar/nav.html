@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <style>
+        .top{
+            width:1900px;
+            box-shadow:2px 2px 5px green;
+            background-color: bisque;
+        }
+        #hide{
+            display: none;
+            width:150px;
+            
+            background-color: rgb(189, 245, 245);
+            box-shadow: 2px 2px 5px red;
+            
+        }
+        .close{
+            margin-left: 85px;
+        }
+#hide a{
+    display:block;
+    display: flex;
+    margin-top:100%;
+text-align: center;
+
+}
+
+#btn{
+    border:0px;
+    background-color: rgb(189, 245, 245);
+    margin-left: 37%;
+}
+
+#aa,#bb,#cc{
+    visibility: hidden;
+}
+    </style>
+</head>
+<body>
+
+    <div class="top" >
+        <button   onclick="fun()">&#9776;</button><span>MENU</span>
+        
+      </div>
+      
+        <div id="hide">
+            <button class="close" onclick="sad()">Close &times;</button>
+            <button id="btn" onclick="AAA()"><a href="#" target="_self">Profile</a></button><br>
+            <button id="btn" onclick="BBB()"><a href="#">Settings</a></button><br>
+            <button id="btn" onclick="CCC()"><a href="#">Help</a></button>
+
+        </div>
+
+           <!-- <div>
+                <p>jgUSGMUIDWmkj</p>
+           </div>
+         -->
+    <script>
+function fun()
+{
+    document.getElementById("hide").style.display ="block";
+}
+function sad()
+{
+    document.getElementById("hide").style.display ="none";
+    document.getElementById("hide").style.position="fixed";
+}
+ function AAA()
+{
+ document.getElementById("aa").style.visibility="visible";
+ document.getElementById("bb").style.visibility="hidden";
+ document.getElementById("cc").style.visibility="hidden";
+
+
+}
+function BBB()
+{ 
+ document.getElementById("aa").style.visibility="hidden";
+ document.getElementById("bb").style.visibility="visible";
+ document.getElementById("cc").style.visibility="hidden";
+
+
+}
+function CCC()
+{
+ document.getElementById("aa").style.visibility="hidden";
+ document.getElementById("bb").style.visibility="hidden";
+ document.getElementById("cc").style.visibility="visible";
+}
+
+
+
+
+
+    </script>
+    <center><iframe id="aa" src="AAAA.html"  frameBorder="0"   title="Iframe Example"></iframe></center>
+    <center><iframe id="bb" src="BB.html"  frameBorder="0"   title="Iframe Example"></iframe></center>
+    <center><iframe id="cc" src="CC.html"  frameBorder="0"   title="Iframe Example"></iframe></center>
+
+ </body>
+</html>

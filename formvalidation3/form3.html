@@ -1,0 +1,99 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Reg Form</title>    
+    <style>    
+        #d{
+            border: 5px solid;
+            border-right-color: aqua;
+            border-left-color: rgb(43, 0, 255);
+            border-top-color: rgb(0, 255, 119);
+            border-bottom-color: rgb(148, 173, 173);
+           width:20%;
+           height:70%;
+           text-align: center;
+           margin-left: 30%;
+        }
+        #f label,input{
+            text-align-last:center;
+            padding:0.5%;
+            margin-left: 10%;
+            
+        }#demo11,#demo12,#demo13{
+            color: red;
+        }
+        #demo1,#demo2,#demo3{
+            color: rgb(31, 233, 149);
+        }
+    </style>       
+</head>    
+<body>    
+       <div id="d">
+    <form id="f" name="form" onsubmit="validate()">    
+        <center><h2>Registration Form</h2>    </center>
+        <label>Name: </label><input type="text" name="fname" placeholder="First Name"><br><span id="demo1"></span><br><span id="demo11"></span><br>
+            
+                
+                
+                <label>Email Id: </label><input type="text" name="email" placeholder="example@gmail.com"><br><span id="demo12"></span><br><span id="demo2"></span>  <br>   
+                 
+                <label>Mobile: </label><input type="number" name="mobile"><br><span id="demo3"></span><br><span id="demo13"></span><br>
+        
+            
+                    <input type="button" name="submit" value="Submit" onclick="validation()">    
+                    <input type="reset" name="reset" value="Reset" onclick="validation()">    
+                 
+    </form>   
+</div>
+    
+    <script>    
+    function validation()
+    {     var fname = document.form.fname;      
+            var email = document.form.email;    
+            var mobile = document.form.mobile;    
+               var expname=/\d+$/g; 
+    
+            if (fname.value.length <= 0) {    
+                document.getElementById("demo11").innerHTML="Above field is required"; 
+               
+            }
+            
+            else if(fname.value.match!=expname)
+            {
+            document.getElementById("demo1").innerHTML="Only alphabets are allowed not other charaters";  
+                
+            }
+            
+             else if (email.value.length <= 0) {    
+                document.getElementsById("demo12").innerHTML="Above field is required"; 
+                  
+            } 
+            
+            else if(email.value!=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g)
+            {
+                document.getElementById("demo2").innerHTML="Only alphabets are allowed not other charaters";  
+                
+            } 
+
+            else if (mobile.value.length <= 0) {    
+                document.getElementsById("demo13").innerHTML="Above field is required"; 
+                   
+            } 
+            
+            else if(email.value!=/^\d{10}$/)
+            {
+                document.getElementById("demo3").innerHTML="Only alphabets are allowed not other charaters";  
+                  
+            } 
+            else{
+                return true;
+            }
+            
+            
+            
+            
+         
+    }
+    </script> 
+</body>    
+</html> 

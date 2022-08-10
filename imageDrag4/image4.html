@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<style>
+    .upload-container {
+        position: relative;
+    }
+    .upload-container input {
+        border: 1px solid grey;
+        background: white;
+        outline: 2px dashed #92b0b3;
+        
+        padding: 100px 0px 100px 250px;
+        
+        width: 200px;
+        text-align: center !important;
+    }
+    .upload-container input:hover {
+        background: #ddd;
+    }   
+    
+    .upload-btn {
+        margin-left: 300px;
+        padding: 5px 20px;
+    }   
+
+</style>
+<script>
+             
+    function uploadFiles() {
+        var files = document.getElementById('file_upload').files;
+        if(files.length==0){
+            alert("Please first choose or drop any file(s)...");
+            return;
+        }
+        var filenames="";
+        for(var i=0;i<files.length;i++){
+            filenames+=files[i].name+"\n";
+        }
+        alert("Selected file(s) :\n____________________\n"+filenames);
+    }
+            
+</script>
+</head>
+<body>
+    <center><div class="upload-container">
+        <input type="file" id="file_upload" multiple />
+    </div>
+    <br>
+    <button class="upload-btn" onclick="uploadFiles()">Submit</button> 
+</center> 
+</body>
+</html>
